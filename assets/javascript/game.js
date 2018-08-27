@@ -31,13 +31,12 @@ answerArray[i] = "_ ";
 }
 
 // User's guesses
+var chosenGuesses = [];
 document.onkeyup = function(event){
     var userGuesses = event.key;
-    var chosenGuesses = [];
 
-    for (i = 0; i < 24; i++){
-        chosenGuesses.push(userGuesses[i]);
-    };    
+    chosenGuesses.push(userGuesses.toUpperCase());
+
     document.getElementById("guess").innerHTML = chosenGuesses;
     console.log(chosenGuesses);
 }
