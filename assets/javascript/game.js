@@ -15,7 +15,8 @@ document.onkeyup = function(event){
     document.querySelector("#guess").innerHTML = guesses;
     if (guess == comChoice){
         win++;
-        winReset();
+        // winReset();
+        resets();
     } 
     if (guess !== comChoice){
         remain--;
@@ -34,13 +35,14 @@ document.onkeyup = function(event){
 function resets () {
     remain = 9;
     guesses = [];
-    // var comChoice = letters[Math.floor(Math.random() * letters.length)];
-}
-
-function winReset(){
     comChoice = letters[Math.floor(Math.random() * letters.length)];
     console.log(comChoice);
 }
+
+// function winReset(){
+//     comChoice = letters[Math.floor(Math.random() * letters.length)];
+//     console.log(comChoice);
+// }
 
 
 console.log(comChoice);
